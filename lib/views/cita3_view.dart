@@ -3,16 +3,12 @@ import 'package:flutter/material.dart';
 class Citas3 extends StatelessWidget {
   
   final Cit3 = {
-'Fecha: 07/10/2022',
-'Hora: 11:30:00',
-'Tratamiento: Periodoncia',
-'Doctor: Marcela Gomez Pantoja'
-
-
+      ' ',
   };
 
   @override
   Widget build(BuildContext context) {
+    padding: EdgeInsets.symmetric(horizontal: 50,vertical: 50);
     return Scaffold(
         appBar: AppBar(
           // ignore: prefer_const_constructors
@@ -20,13 +16,25 @@ class Citas3 extends StatelessWidget {
         ),
         body: ListView(
           children: [
-            ...Cit3
-            .map(
-              (operacion) => ListTile(
-                title: Text(operacion),
+            Card(
+          child: Column(
+            children: [
+              ListTile(
+                leading: Icon(Icons.car_rental_sharp),
+                
+                title: Text("Tratamiento: Periodoncia"),
+                subtitle: Text("Fecha: 07/10/2022 - Hora: 11:30:00"),
               ),
+              Row(
+                children: [
+                  
+                  TextButton(onPressed: null, child: Text("Doctor: Marcela Gomez Pantoja"))
+                ],
               )
-              .toList(),
+              
+            ],
+          ),
+        ),
           ],
           ),
         );

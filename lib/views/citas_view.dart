@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'cita1_view.dart';
-import 'cita2_view.dart';
-import 'cita3_view.dart';
+import 'package:proyecto2/viewExport/viewExport.dart';
+
+
+
+
 
 
 
@@ -15,6 +17,8 @@ class _CitasState extends State<Citas> {
 
   @override
   Widget build(BuildContext context) {
+    padding: EdgeInsets.symmetric(horizontal: 30,vertical: 30);
+
     return Scaffold(
       
         appBar: AppBar(
@@ -22,10 +26,16 @@ class _CitasState extends State<Citas> {
         ),
         body: ListView(
           children: [ 
-            ListTile(
-              
+
+
+
+          Card(
+            child: Column(
+              children: [
+                ListTile(
+              leading: Icon(Icons.library_books_sharp),
               title: Text("Citas 1"),
-              trailing:Icon(Icons.book_sharp),
+              trailing:Icon(Icons.arrow_right_alt_outlined),
               onTap: (){
                 Navigator.push(context, 
                 
@@ -34,10 +44,18 @@ class _CitasState extends State<Citas> {
               },
          ),
 
-         ListTile(
-              
+              ],
+            ),
+
+          ),
+
+          Card(
+            child: Column(
+              children: [
+                ListTile(
+              leading: Icon(Icons.collections_bookmark_rounded),
               title: Text("Citas 2"),
-              trailing:Icon(Icons.book_sharp),
+              trailing:Icon(Icons.arrow_right_alt_outlined),
               onTap: (){
                 Navigator.push(context, 
                 
@@ -46,18 +64,35 @@ class _CitasState extends State<Citas> {
                 
               },
          ),
-         ListTile(
-              
+
+              ],
+            ),
+          ),
+
+          Card(
+            child:Column(
+              children: [
+                ListTile(
+              leading: Icon(Icons.bookmarks),
               title: Text("Citas 3"),
-              trailing:Icon(Icons.book_sharp),
+              trailing:Icon(Icons.arrow_right_alt_outlined),
               onTap: (){
                 Navigator.push(context, 
                 
               MaterialPageRoute(builder: (context) => Citas3()));
                 
-                
+  
               },
          ),
+
+              ],
+            ),
+          ),
+
+          
+
+         
+         
          
           ],
 

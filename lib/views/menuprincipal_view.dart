@@ -21,11 +21,14 @@ class _MenuPState extends State<MenuP> {
           title: Text('APP CLÍNICA ODONTOLÓGICA'),
         ),
         body: ListView(
+          padding: EdgeInsets.symmetric(horizontal: 20,vertical: 20),
           children: [ 
 
-
-            ListTile(
-              
+            Card(
+          child: Column(
+            children: [
+               ListTile(
+              leading: Icon(Icons.person_rounded),
               title: Text("Mis datos personales"),
               trailing:Icon(Icons.arrow_right_sharp),
               onTap: (){
@@ -35,9 +38,16 @@ class _MenuPState extends State<MenuP> {
                 
               },
          ),
+            ],
+          ),
+        ),
 
-         ListTile(
-              
+           
+        Card(
+          child: Column(
+            children: [
+               ListTile(
+              leading: Icon(Icons.book_online_sharp),
               title: Text("Mis tratamientos"),
               trailing:Icon(Icons.arrow_right_sharp),
               onTap: (){
@@ -48,8 +58,16 @@ class _MenuPState extends State<MenuP> {
                 
               },
          ),
-         ListTile(
-              
+            ],
+          ),
+        ),
+
+
+        Card(
+          child: Column(
+            children: [
+               ListTile(
+              leading: Icon(Icons.circle_notifications),
               title: Text("Citas y agendamiento"),
               trailing:Icon(Icons.arrow_right_sharp),
               onTap: (){
@@ -60,8 +78,15 @@ class _MenuPState extends State<MenuP> {
                 
               },
          ),
-         ListTile(
-              
+            ],
+          ),
+        ),
+
+         Card(
+          child: Column(
+            children: [
+                ListTile(
+              leading: Icon(Icons.monetization_on_rounded),
               title: Text("Pagos realizados"),
               trailing:Icon(Icons.arrow_right_sharp),
               onTap: (){
@@ -72,8 +97,11 @@ class _MenuPState extends State<MenuP> {
                 
               },
          ),
+            ],
+          ),
+        ),
 
-         
+        
          
           ],
 

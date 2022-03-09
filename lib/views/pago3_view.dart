@@ -3,11 +3,7 @@ import 'package:flutter/material.dart';
 class Pago3 extends StatelessWidget {
   
   final Pg3 = {
-'Tratamiento: Periodoncia',
-'Fecha del pago: 10/03/2022',
-'medio de pago: Efectivo',
-'Valor: 700.000'
-
+      ' ',
   };
 
   @override
@@ -19,13 +15,25 @@ class Pago3 extends StatelessWidget {
         ),
         body: ListView(
           children: [
-            ...Pg3
-            .map(
-              (operacion) => ListTile(
-                title: Text(operacion),
+            Card(
+          child: Column(
+            children: [
+              ListTile(
+                leading: Icon(Icons.monetization_on_outlined),
+                
+                title: Text("Tratamiento: Periodoncia"),
+                subtitle: Text("Fecha del pago: 10/03/2022 - medio de pago: Efectivo"),
               ),
+              Row(
+                children: [
+                  
+                  TextButton(onPressed: null, child: Text("Valor: 700.000"))
+                ],
               )
-              .toList(),
+              
+            ],
+          ),
+        ),
           ],
           ),
         );

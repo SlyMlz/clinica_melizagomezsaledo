@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:proyecto2/views/tratamiento1_view.dart';
-import 'package:proyecto2/views/tratamiento2_view.dart';
-import 'package:proyecto2/views/tratamiento3_view.dart';
+import 'package:proyecto2/viewExport/viewExport.dart';
 
 
 class Tratamiento extends StatefulWidget {
@@ -14,29 +12,44 @@ class _TratamientoState extends State<Tratamiento> {
 
   @override
   Widget build(BuildContext context) {
+    padding: EdgeInsets.symmetric(horizontal: 30,vertical: 30);
     return Scaffold(
       
+
         appBar: AppBar(
+          
           title: Text('MIS TRATAMIENTOS'),
         ),
         body: ListView(
           children: [ 
-            ListTile(
-              
+            
+            Card(
+              child: Column(
+                children: [
+                  ListTile(
+              leading: Icon(Icons.medication_outlined),
               title: Text("Tratamiento 1"),
-              trailing:Icon(Icons.medical_services),
+              trailing:Icon(Icons.arrow_right_alt_outlined),
               onTap: (){
                 Navigator.push(context, 
                 
               MaterialPageRoute(builder: (context) => Tratamiento1()));
                 
               },
-         ),
+               ),
 
-         ListTile(
-              
+                ],
+              ),
+
+            ),
+
+            Card(
+              child: Column(
+                children: [
+                  ListTile(
+              leading: Icon(Icons.medication_rounded),
               title: Text("Tratamiento 2"),
-              trailing:Icon(Icons.medical_services),
+              trailing:Icon(Icons.arrow_right_alt_outlined),
               onTap: (){
                 Navigator.push(context, 
                 
@@ -45,22 +58,33 @@ class _TratamientoState extends State<Tratamiento> {
                 
               },
          ),
-         ListTile(
-              
+
+                ],
+              ),
+            ),
+
+            Card(
+              child: Column(
+                children: [
+                  ListTile(
+              leading: Icon(Icons.medical_services_sharp),
               title: Text("Tratamiento 3"),
-              trailing:Icon(Icons.medical_services),
+              trailing:Icon(Icons.arrow_right_alt_outlined),
               onTap: (){
                 Navigator.push(context, 
                 
               MaterialPageRoute(builder: (context) => Tratamiento3()));
-                
-                
+   
               },
          ),
-         
+                ]
+              ),
+
+            ),
+          
           ],
 
-          
+
         ),
         
         
@@ -68,8 +92,5 @@ class _TratamientoState extends State<Tratamiento> {
 
         );
 
-  // ignore: dead_code
- 
-    
   }
 }

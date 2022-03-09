@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:proyecto2/views/pago1_view.dart';
-import 'package:proyecto2/views/pago2_view.dart';
-import 'package:proyecto2/views/pago3_view.dart';
+import 'package:proyecto2/viewExport/viewExport.dart';
+
 
 
 
@@ -22,10 +21,15 @@ class _PagoState extends State<Pago> {
         ),
         body: ListView(
           children: [ 
-            ListTile(
-              
+
+
+            Card(
+              child: Column(
+                children: [
+                  ListTile(
+              leading: Icon(Icons.monetization_on_rounded),
               title: Text("Pago 1"),
-              trailing:Icon(Icons.attach_money_outlined),
+              trailing:Icon(Icons.arrow_right_alt_outlined),
               onTap: (){
                 Navigator.push(context, 
                 
@@ -34,10 +38,18 @@ class _PagoState extends State<Pago> {
               },
          ),
 
-         ListTile(
-              
+                ],
+              ),
+
+            ),
+
+            Card(
+              child: Column(
+                children: [
+                  ListTile(
+              leading: Icon(Icons.monetization_on_sharp),
               title: Text("Pago 2"),
-              trailing:Icon(Icons.attach_money_outlined),
+              trailing:Icon(Icons.arrow_right_alt_outlined),
               onTap: (){
                 Navigator.push(context, 
                 
@@ -46,10 +58,19 @@ class _PagoState extends State<Pago> {
                 
               },
          ),
-         ListTile(
-              
+
+                ],
+              ),
+
+            ),
+
+            Card(
+              child: Column(
+                children: [
+                  ListTile(
+              leading: Icon(Icons.monetization_on_rounded),
               title: Text("Pago 3"),
-              trailing:Icon(Icons.attach_money_outlined),
+              trailing:Icon(Icons.arrow_right_alt_outlined),
               onTap: (){
                 Navigator.push(context, 
                 
@@ -58,6 +79,15 @@ class _PagoState extends State<Pago> {
                 
               },
          ),
+
+                ],
+              ),
+
+            ), 
+            
+
+         
+         
          
           ],
 

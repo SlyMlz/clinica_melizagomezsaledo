@@ -4,11 +4,7 @@ class Pago2 extends StatelessWidget {
   
   final Pg2 = {
 'Tratamiento: Odontopediatría ',
-'Fecha del pago: 18/02/2022',
-'medio de pago: Efectivo',
-'Valor: 1.000.000',
-
-
+    ' ',
   };
 
   @override
@@ -20,13 +16,25 @@ class Pago2 extends StatelessWidget {
         ),
         body: ListView(
           children: [
-            ...Pg2
-            .map(
-              (operacion) => ListTile(
-                title: Text(operacion),
+            Card(
+          child: Column(
+            children: [
+              ListTile(
+                leading: Icon(Icons.monetization_on_outlined),
+                
+                title: Text("Tratamiento: Odontopediatría"),
+                subtitle: Text("Fecha del pago: 18/02/2022 - medio de pago: Efectivo"),
               ),
+              Row(
+                children: [
+                  
+                  TextButton(onPressed: null, child: Text("Valor: 1.000.000"))
+                ],
               )
-              .toList(),
+              
+            ],
+          ),
+        ),
           ],
           ),
         );
